@@ -1,0 +1,19 @@
+[package]
+name = "hellorust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "*"
+libc = { version = "0.2.167", default-features = false}
+linked_list_allocator = "0.10.5"
+embedded-graphics = "0.8.0"
+static_cell = { version = "2.1.0",  features = ["nightly"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
